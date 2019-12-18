@@ -47,3 +47,90 @@
 2019-12-18 08:02:01: select * from `users` where `id` = 126 limit 1
 2019-12-18 08:02:01: select count(*) as aggregate from `products` where `on_sale` = 1
 2019-12-18 08:02:01: select * from `products` where `on_sale` = 1 limit 16 offset 0
+2019-12-18 08:31:26: select * from `products` where `id` = '1' limit 1
+2019-12-18 08:31:26: select * from `order_items` where `product_id` = 1 and `reviewed_at` is not null order by `reviewed_at` desc limit 10
+2019-12-18 08:31:26: select * from `orders` where `orders`.`id` in (19, 50, 52, 80, 92)
+2019-12-18 08:31:26: select * from `users` where `users`.`id` in (12, 15, 18, 30, 56)
+2019-12-18 08:31:26: select * from `product_skus` where `product_skus`.`id` in (1, 2)
+2019-12-18 08:31:26: select * from `product_skus` where `product_skus`.`product_id` = 1 and `product_skus`.`product_id` is not null
+2019-12-18 08:39:30: select * from `products` where `id` = '1' limit 1
+2019-12-18 08:39:30: select * from `order_items` where `product_id` = 1 and `reviewed_at` is not null order by `reviewed_at` desc limit 10
+2019-12-18 08:39:30: select * from `orders` where `orders`.`id` in (19, 50, 52, 80, 92)
+2019-12-18 08:39:30: select * from `users` where `users`.`id` in (12, 15, 18, 30, 56)
+2019-12-18 08:39:30: select * from `product_skus` where `product_skus`.`id` in (1, 2)
+2019-12-18 08:39:30: select * from `product_skus` where `product_skus`.`product_id` = 1 and `product_skus`.`product_id` is not null
+2019-12-18 08:40:12: select * from `users` where `email` = 'sint_distinctio@example.com' limit 1
+2019-12-18 08:40:23: select * from `users` where `email` = 'sint_distinctio@example.com' limit 1
+2019-12-18 08:40:23: select count(*) as aggregate from `products` where `on_sale` = 1
+2019-12-18 08:40:24: select * from `products` where `on_sale` = 1 limit 16 offset 0
+2019-12-18 08:40:24: select * from `users` where `id` = 1 limit 1
+2019-12-18 08:40:26: select * from `users` where `id` = 1 limit 1
+2019-12-18 08:40:26: select count(*) as aggregate from `orders` where `user_id` = 1
+2019-12-18 08:40:26: select * from `orders` where `user_id` = 1 order by `created_at` desc limit 15 offset 0
+2019-12-18 08:40:26: select * from `order_items` where `order_items`.`order_id` in (26)
+2019-12-18 08:40:26: select * from `products` where `products`.`id` in (6, 23)
+2019-12-18 08:40:26: select * from `product_skus` where `product_skus`.`id` in (18, 67)
+2019-12-18 08:40:30: select * from `users` where `id` = 1 limit 1
+2019-12-18 08:40:30: select * from `orders` where `id` = '26' limit 1
+2019-12-18 08:40:30: select * from `order_items` where `order_items`.`order_id` in (26)
+2019-12-18 08:40:30: select * from `product_skus` where `product_skus`.`id` in (18, 67)
+2019-12-18 08:40:30: select * from `products` where `products`.`id` in (6, 23)
+2019-12-18 08:40:32: select * from `users` where `id` = 1 limit 1
+2019-12-18 08:40:32: select count(*) as aggregate from `orders` where `user_id` = 1
+2019-12-18 08:40:32: select * from `orders` where `user_id` = 1 order by `created_at` desc limit 15 offset 0
+2019-12-18 08:40:32: select * from `order_items` where `order_items`.`order_id` in (26)
+2019-12-18 08:40:32: select * from `products` where `products`.`id` in (6, 23)
+2019-12-18 08:40:32: select * from `product_skus` where `product_skus`.`id` in (18, 67)
+2019-12-18 08:40:35: select * from `users` where `id` = 1 limit 1
+2019-12-18 08:40:35: select * from `orders` where `id` = '26' limit 1
+2019-12-18 08:40:35: select * from `order_items` where `order_items`.`order_id` in (26)
+2019-12-18 08:40:35: select * from `product_skus` where `product_skus`.`id` in (18, 67)
+2019-12-18 08:40:35: select * from `products` where `products`.`id` in (6, 23)
+2019-12-18 08:41:03: select * from `products` where `id` = '6' limit 1
+2019-12-18 08:41:03: select * from `users` where `id` = 1 limit 1
+2019-12-18 08:41:03: select `products`.*, `user_favorite_products`.`user_id` as `pivot_user_id`, `user_favorite_products`.`product_id` as `pivot_product_id`, `user_favorite_products`.`created_at` as `pivot_created_at`, `user_favorite_products`.`updated_at` as `pivot_updated_at` from `products` inner join `user_favorite_products` on `products`.`id` = `user_favorite_products`.`product_id` where `user_favorite_products`.`user_id` = 1 and `products`.`id` = 6 order by `user_favorite_products`.`created_at` desc limit 1
+2019-12-18 08:41:03: select * from `order_items` where `product_id` = 6 and `reviewed_at` is not null order by `reviewed_at` desc limit 10
+2019-12-18 08:41:03: select * from `orders` where `orders`.`id` in (1, 7, 17, 23, 26, 55, 59, 62, 100)
+2019-12-18 08:41:03: select * from `users` where `users`.`id` in (1, 2, 17, 23, 27, 30, 37, 46)
+2019-12-18 08:41:03: select * from `product_skus` where `product_skus`.`id` in (16, 17, 18)
+2019-12-18 08:41:03: select * from `product_skus` where `product_skus`.`product_id` = 6 and `product_skus`.`product_id` is not null
+2019-12-18 08:41:07: select * from `products` where `id` = '23' limit 1
+2019-12-18 08:41:07: select * from `users` where `id` = 1 limit 1
+2019-12-18 08:41:07: select `products`.*, `user_favorite_products`.`user_id` as `pivot_user_id`, `user_favorite_products`.`product_id` as `pivot_product_id`, `user_favorite_products`.`created_at` as `pivot_created_at`, `user_favorite_products`.`updated_at` as `pivot_updated_at` from `products` inner join `user_favorite_products` on `products`.`id` = `user_favorite_products`.`product_id` where `user_favorite_products`.`user_id` = 1 and `products`.`id` = 23 order by `user_favorite_products`.`created_at` desc limit 1
+2019-12-18 08:41:07: select * from `order_items` where `product_id` = 23 and `reviewed_at` is not null order by `reviewed_at` desc limit 10
+2019-12-18 08:41:07: select * from `orders` where `orders`.`id` in (2, 26, 42, 49, 75)
+2019-12-18 08:41:07: select * from `users` where `users`.`id` in (1, 26, 62, 64, 81)
+2019-12-18 08:41:07: select * from `product_skus` where `product_skus`.`id` in (67, 68)
+2019-12-18 08:41:07: select * from `product_skus` where `product_skus`.`product_id` = 23 and `product_skus`.`product_id` is not null
+2019-12-18 08:41:38: select * from `users` where `id` = 1 limit 1
+2019-12-18 08:41:38: select count(*) as aggregate from `orders` where `user_id` = 1
+2019-12-18 08:41:38: select * from `orders` where `user_id` = 1 order by `created_at` desc limit 15 offset 0
+2019-12-18 08:41:38: select * from `order_items` where `order_items`.`order_id` in (26)
+2019-12-18 08:41:38: select * from `products` where `products`.`id` in (6, 23)
+2019-12-18 08:41:38: select * from `product_skus` where `product_skus`.`id` in (18, 67)
+2019-12-18 08:43:26: select * from `users` where `id` = 1 limit 1
+2019-12-18 08:43:26: select * from `orders` where `id` = '26' limit 1
+2019-12-18 08:43:26: select * from `order_items` where `order_items`.`order_id` in (26)
+2019-12-18 08:43:26: select * from `product_skus` where `product_skus`.`id` in (18, 67)
+2019-12-18 08:43:26: select * from `products` where `products`.`id` in (6, 23)
+2019-12-18 08:43:29: select count(*) as aggregate from `products` where `on_sale` = 1
+2019-12-18 08:43:29: select * from `products` where `on_sale` = 1 limit 16 offset 0
+2019-12-18 08:43:29: select * from `users` where `id` = 1 limit 1
+2019-12-18 08:48:43: select * from `products` where `id` = '6' limit 1
+2019-12-18 08:48:43: select * from `users` where `id` = 1 limit 1
+2019-12-18 08:48:43: select `products`.*, `user_favorite_products`.`user_id` as `pivot_user_id`, `user_favorite_products`.`product_id` as `pivot_product_id`, `user_favorite_products`.`created_at` as `pivot_created_at`, `user_favorite_products`.`updated_at` as `pivot_updated_at` from `products` inner join `user_favorite_products` on `products`.`id` = `user_favorite_products`.`product_id` where `user_favorite_products`.`user_id` = 1 and `products`.`id` = 6 order by `user_favorite_products`.`created_at` desc limit 1
+2019-12-18 08:48:43: select * from `order_items` where `product_id` = 6 and `reviewed_at` is not null order by `reviewed_at` desc limit 10
+2019-12-18 08:48:43: select * from `orders` where `orders`.`id` in (1, 7, 17, 23, 26, 55, 59, 62, 100)
+2019-12-18 08:48:43: select * from `users` where `users`.`id` in (1, 2, 17, 23, 27, 30, 37, 46)
+2019-12-18 08:48:43: select * from `product_skus` where `product_skus`.`id` in (16, 17, 18)
+2019-12-18 08:49:02: select * from `products` where `id` = '6' limit 1
+2019-12-18 08:49:02: select * from `users` where `id` = 1 limit 1
+2019-12-18 08:49:02: select `products`.*, `user_favorite_products`.`user_id` as `pivot_user_id`, `user_favorite_products`.`product_id` as `pivot_product_id`, `user_favorite_products`.`created_at` as `pivot_created_at`, `user_favorite_products`.`updated_at` as `pivot_updated_at` from `products` inner join `user_favorite_products` on `products`.`id` = `user_favorite_products`.`product_id` where `user_favorite_products`.`user_id` = 1 and `products`.`id` = 6 order by `user_favorite_products`.`created_at` desc limit 1
+2019-12-18 08:49:02: select * from `order_items` where `product_id` = 6 and `reviewed_at` is not null order by `reviewed_at` desc limit 10
+2019-12-18 08:49:02: select * from `orders` where `orders`.`id` in (1, 7, 17, 23, 26, 55, 59, 62, 100)
+2019-12-18 08:49:02: select * from `users` where `users`.`id` in (1, 2, 17, 23, 27, 30, 37, 46)
+2019-12-18 08:49:02: select * from `product_skus` where `product_skus`.`id` in (16, 17, 18)
+2019-12-18 08:49:02: select * from `product_skus` where `product_skus`.`product_id` = 6 and `product_skus`.`product_id` is not null
+2019-12-18 08:49:04: select count(*) as aggregate from `products` where `on_sale` = 1
+2019-12-18 08:49:04: select * from `products` where `on_sale` = 1 limit 16 offset 0
+2019-12-18 08:49:04: select * from `users` where `id` = 1 limit 1
